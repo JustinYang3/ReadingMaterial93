@@ -1,29 +1,29 @@
 # ReadingMaterial93
 public class ReadingMaterial {
-	private int pages=0;
-    private String names="";
-    public ReadingMaterial(int p,String n){
-        pages=p;
-        names=n;
-    }
-    public int getPages(){
-        return pages;
-    }
-    public String getName(){
-        return names;
-    }
-    @Override
-    public String toString(){
-        return names+", "+pages+" pages";
-    }
+	private int pages;
+   	private String names;
+    	public ReadingMaterial(int p, String n){
+               pages = p;
+               names = n;
+	}
+	public int getPages(){
+		return pages;
+	    }
+	    public String getName(){
+		return names;
+	    }
+
+	    public String toString(){
+		return names + ", "+ pages+" pages";
+	    }
 }
 
 # Main
 public class Main {
 
 	public static void main(String[] args) {
-		Novel nov1=new Novel(10,"Huck Finn", "Mystery", 1943);
-        Comic com1=new Comic(40,"Captain Underpants", "Color", 2020);
+	Novel nov1 = new Novel(328, "1984", "Sci-fi", 1949);
+        Comic com1 = new Comic(40,"Captain Underpants", "Color", 2020);
         Magazine mag1=new Magazine(20,"Sports Illustrated", "Sports", 1993);
         
         System.out.println(mag1);
@@ -51,11 +51,11 @@ public class Comic extends ReadingMaterial{
 		 year = releaseYear;
 		 
 	 }
-	 public void getColor() {
-		 System.out.println(col);
+	 public String getColor() {
+		 return col;
 	 }
-	 public void getYear() {
-		 System.out.println(year);
+	 public int getYear() {
+		 return year;
 	 }
 }
 
@@ -69,17 +69,17 @@ public class Magazine extends ReadingMaterial{
 		 year = releaseYear;
 		 
 	 }
-	 public void getCategory() {
-		 System.out.println(cat);
+	 public String getCategory() {
+		 return cat;
 	 }
-	 public void getYear() {
-		 System.out.println(year);
+	 public int getYear() {
+		 return year;
 	 }
 }
 
 # Novel
 public class Novel extends ReadingMaterial{
-	public String Gen;
+	public String gen;
 	public int year;
 	public Novel (int page, String name, String genre, int releaseYear) {
 		 super(page, name);
@@ -87,10 +87,10 @@ public class Novel extends ReadingMaterial{
 		 year = releaseYear;
 		 
 	 }
-	 public void getGenre() {
-		 System.out.println(Gen);
+	 public String getGenre() {
+		 return gen;
 	 }
-	 public void getYear() {
-		 System.out.println(year);
+	 public int getYear() {
+		 return year;
 	 }
 }
